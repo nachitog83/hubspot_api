@@ -27,7 +27,7 @@ Frontend client: http://localhost:3000
 
 ## API Endpoints
 
-#### **GET /api/oauth/authorize**
+### **GET /api/oauth/authorize**
 
 **Perform OAuth flow to get HubSpot's access and refresh tokens.**
 
@@ -56,7 +56,7 @@ If in turn, we already have an access and refresh token from Hubspot, the endpoi
 }
 ```
 
-#### **POST /api/auth/signup**
+### **POST /api/auth/signup**
 
 **Sign Up new user**
 
@@ -77,7 +77,7 @@ If in turn, we already have an access and refresh token from Hubspot, the endpoi
 }
 ```
 
-#### **POST /api/auth/login**
+### **POST /api/auth/login**
 
 **Log in user**
 
@@ -97,7 +97,7 @@ If in turn, we already have an access and refresh token from Hubspot, the endpoi
 }
 ```
 
-#### **GET /api/deals/update**
+### **GET /api/deals/update**
 
 **Get Deals from Hubspot**
 
@@ -120,7 +120,7 @@ If Update is successful, system will send the following response, with deals add
 ```
 
 
-#### **GET /api/deals/show**
+### **GET /api/deals/show**
 
 **Show Deals**
 
