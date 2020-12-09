@@ -18,10 +18,10 @@ command for build: docker-compose build
 command for start: docker-compose up -d
 command for logs: docker-compose logs -f -t
 
-Backend server: http://localhost:5000
-Frontend client: http://localhost:3000
+.Backend server: http://localhost:5000
+.Frontend client: http://localhost:3000
 
-## API Endpoints:
+## API Endpoints
 
 /api/oauth/authorize - Perform OAuth flow to get HubSpot's access and refresh tokens.
 
@@ -40,6 +40,6 @@ Flask-restful doesn't provide flexibility in terms of error handling (this was n
 
 Flask jwt was used to login and persist users within the API. Users cannot access the API endpoints without being logged to the backend.
 
-Front End was first time with React, so it's very basic and lacks some common functions (such as hiding components based on users logged) due to time constrains. I plan on continuing developing the frondend client for fun purposes.
+Front End was first time with React, so it's very basic and lacks some common features (such as hiding components based on users logged) due to time constrains. I plan on continuing developing the frondend client for fun purposes.
 
 
