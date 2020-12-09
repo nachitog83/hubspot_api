@@ -19,6 +19,7 @@ command for start: docker-compose up -d
 command for logs: docker-compose logs -f -t
 
 .Backend server: http://localhost:5000
+
 .Frontend client: http://localhost:3000
 
 ## API Endpoints
@@ -26,9 +27,11 @@ command for logs: docker-compose logs -f -t
 /api/oauth/authorize - Perform OAuth flow to get HubSpot's access and refresh tokens.
 
 /api/auth/signup - Sign Up new user
+
 /api/auth/login - Sign In user
 
 /api/deals/update - GET Deals from Hubspot
+
 /api/deals/show - Show Deals
 
 ## Considerations
