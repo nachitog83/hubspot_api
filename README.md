@@ -6,8 +6,8 @@ HubSpot API project.
 
 Install Docker and docker-compose
 
-[Docker:] (https://docs.docker.com/get-docker/)
-[docker-compose:] (https://docs.docker.com/compose/install/)
+1. Docker: https://docs.docker.com/get-docker/
+2. docker-compose: https://docs.docker.com/compose/install/
 
 ## Run
 
