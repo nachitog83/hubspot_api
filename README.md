@@ -12,19 +12,24 @@ Install Docker and docker-compose
 ## Run
 
 Pull repo to local folder.
+
 Place in root folder and execute docker-compose
 
-.*command for build: docker-compose build
-.*command for start: docker-compose up -d
-.*command for logs: docker-compose logs -f -t
+Command for build: docker-compose build
 
-.*Backend server: http://localhost:5000
+Command for start: docker-compose up -d
 
-.*Frontend client: http://localhost:3000
+Command for logs: docker-compose logs -f -t
+
+Backend server: http://localhost:5000
+
+Frontend client: http://localhost:3000
 
 ## API Endpoints
 
-**GET /api/oauth/authorize** - Perform OAuth flow to get HubSpot's access and refresh tokens.
+#### **GET /api/oauth/authorize**
+
+**Perform OAuth flow to get HubSpot's access and refresh tokens.**
 
 **Header**
 ```
@@ -51,7 +56,9 @@ If in turn, we already have an access and refresh token from Hubspot, the endpoi
 }
 ```
 
-**POST /api/auth/signup** - Sign Up new user
+#### **POST /api/auth/signup**
+
+**Sign Up new user**
 
 **Body**
 ```
@@ -70,7 +77,9 @@ If in turn, we already have an access and refresh token from Hubspot, the endpoi
 }
 ```
 
-**POST /api/auth/login** - Log in user
+#### **POST /api/auth/login**
+
+**Log in user**
 
 **Body**
 ```
@@ -88,7 +97,9 @@ If in turn, we already have an access and refresh token from Hubspot, the endpoi
 }
 ```
 
-**GET /api/deals/update** - Get Deals from Hubspot
+#### **GET /api/deals/update**
+
+**Get Deals from Hubspot**
 
 **Header**
 ```
@@ -109,7 +120,9 @@ If Update is successful, system will send the following response, with deals add
 ```
 
 
-**GET /api/deals/show** - Show Deals
+#### **GET /api/deals/show**
+
+**Show Deals**
 
 **Header**
 ```
