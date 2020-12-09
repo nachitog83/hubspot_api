@@ -37,10 +37,21 @@ class GetUpdateDeals(Resource):
                 raise SystemExit(err)
 
             response = response.json().get('results')
-            deals = deal_schema.load(response)
-            for deal in deals:
-                Deal(dealid=deal['dealid']).update(**deal, upsert=True)
-            return jsonify(success='deals updated')
+            hubdeals = deal_schema.load(response)
+            dbdeals = deal_schema.dump(Deal.objects)
+            deals_updated = 0
+            deals_deleted = 0
+            for deal in hubdeals:
+                    current_app.logger.info(deal)
+                    Deal(dealid=deal['dealid']).update(**deal, upsert=True)
+                    deals_updated+=1
+            for deal in dbdeals:
+                if not any(d['dealid'] == deal['dealid'] for d in hubdeals):
+                    current_app.logger.info(deal)
+                    Deal.objects(dealid=deal['dealid']).delete()
+                    deals_deleted+=1
+                
+            return jsonify(deals_updated=deals_updated, deals_deleted=deals_deleted)
 
 class ShowDeals(Resource):
     @jwt_required
